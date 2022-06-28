@@ -1,0 +1,196 @@
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import { faker } from '@faker-js/faker'
+
+const ticketsData = [
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+	{
+		id: faker.database.mongodbObjectId(),
+		date: faker.date.future(),
+		name: faker.name.findName(),
+		subject: faker.lorem.words(7),
+		status: faker.fake('En progreso'),
+		priority: faker.fake('Normal'),
+		lastChange: faker.fake('1D'),
+	},
+]
+
+let test = {
+	id: faker.database.mongodbObjectId(),
+	date: faker.date.future(),
+	name: faker.name.findName(),
+	subject: faker.lorem.words(7),
+	status: faker.fake('En progreso'),
+	priority: faker.fake('Normal'),
+	lastChange: faker.fake('1D'),
+}
+
+for (let i = 0; i < 150000; i++) {
+	ticketsData.push(test)
+}
+
+const data = ticketsData
+
+console.log(data)
+
+const bla = [0]
+const DisplayData = data.map((info) => {
+	bla.push(`${JSON.stringify(info)},`)
+})
+DisplayData
+
+export default function Home() {
+	return (
+		<div className={styles.container}>
+			<Head>
+				<title>Create Next App</title>
+				<meta name="description" content="Generated by create next app" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			{bla}
+		</div>
+	)
+}
